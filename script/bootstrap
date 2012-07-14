@@ -26,7 +26,7 @@ function install_chef() {
 }
 
 function ensure_var_chef() {
-  if [! -d /var/chef ]; then
+  if [ ! -d /var/chef ]; then
     sudo mkdir -p /var/chef/cache
   fi
 }
