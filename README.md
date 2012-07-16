@@ -15,3 +15,9 @@ or
     vagrant up deploy
     # visit http://localhost:8080/
 
+
+# TODO
+
+* Remove rails app, and generate it a new one
+* setup headless UI testing (poltergeist)
+

@@ -48,8 +48,6 @@ Vagrant::Config.run do |config|
     # Now using production like web servers
     config.vm.forward_port 80, 8080
 
-    config.vm.share_folder "rails_app", "/opt/nginx/sites/app", "#{APP_DIR}"
-
     config.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = ["#{INFRA_DIR}/site-cookbooks", "#{INFRA_DIR}/cookbooks"]
       chef.add_recipe("apt")
