@@ -1,0 +1,8 @@
+#! /usr/bin/env ruby
+require 'vagrant'
+
+env = Vagrant::Environment.new
+cmd = "cd workspace && #{File.basename($0)} #{ARGV.join(' ')}"
+env.vms[:dev].channel.execute(cmd) do |_, data|
+	puts data
+end 
